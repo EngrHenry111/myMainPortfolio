@@ -5,7 +5,7 @@ import profile_image from '../../assets/image/profile_image.png'
 
 export const About = () => {
   return (
-    <div className='about'>
+    <div id='about' className='about'>
         <div className="about_title">
             <h1>About Me</h1>
             <img src={theme_parttern} alt="" />
@@ -19,7 +19,7 @@ export const About = () => {
             <div className="about_right">
                 <div className="about_paragraph">
                     <p>I'm an experience Full-Stack Web Developer with years of experience</p>
-                    <p>My passion for web development increase on daily bases as I encounter change and be able to solve them.</p>
+                    <p>My passion for web development increase on daily bases as I encounter challenges and be able to solve them.</p>
 
                 </div>
 

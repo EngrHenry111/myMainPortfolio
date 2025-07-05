@@ -115,3 +115,53 @@
     transform: scale(1.10);
     transition: .5s;
 }
+
+@media(max-width:768px){
+    .contact{
+        gap: 50px;
+        margin: 40px 60px;
+        align-items: start;
+    }
+    .contact-title h1{
+        padding: 0;
+        font-size: 50px;
+        font-weight: 600;
+    }
+    .contact img{
+        width: 70px;
+        margin: -10px;
+
+    }
+    .contactSection{
+        flex-direction: column;
+    }
+    .contactLeft h1{
+        font-size: 50px;
+    }
+    .contactLeft p{
+        font-size: 20px;
+    }
+    .contactDetail{
+        gap: 60px;
+
+    }
+    .bxr1 {
+      
+        font-size: 54px;
+    }
+    .contact-right label{
+        font-size: 20px;
+    }
+    .contact-right input{
+        width: 100%;
+        font-size: 20px;
+    }
+    .contact-right textarea{
+        width: 95%;
+        font-size: 20px;
+    }
+    .contact-submit{
+        font-size: 20px;
+        padding: 15px 35px;
+    }
+}

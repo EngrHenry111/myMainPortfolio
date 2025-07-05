@@ -3,8 +3,33 @@ import './contact.css'
 import theme_partern from '../../assets/image/Group 1 (2).png'
 
 export const Contact = () => {
+
+
+    const onSubmit = async (event) =>{
+        event.preventDefault();
+        const formData = new formData(event.target);
+
+        formData.append('access_keky', "2188576c-9d37-4a0e-92fe-e7d287fe7811");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                accept: "application/json"
+            },
+            body: json
+        }).then((res) =>res.json())
+
+        if (res.success){
+           alert(res.message);
+        }
+    }
+
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
         <div className="contact-title">
          <h1>   Get in touch</h1>
          <img src={theme_partern} alt="" />
@@ -30,7 +55,7 @@ export const Contact = () => {
                     </div>
                 </div>
             </div>
-            <form className='contact-right'>
+            <form onSubmit={onSubmit} className='contact-right'>
                 <label htmlFor="">Your Name</label>
                 <input type="text" placeholder='Enter your name'  name='name'/>
                 <label htmlFor="">Your Email</label>
