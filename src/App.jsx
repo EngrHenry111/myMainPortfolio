@@ -6,6 +6,8 @@ import { Services } from './Component/services/service'
 import { MyWork } from './Component/myWork/myWork'
 import { Contact } from './Component/contact/contact'
 import { Footer } from './Component/footer/footer'
+import { Resume } from './Component/resume/resume'
+
 
 
 
@@ -22,7 +24,10 @@ function App() {
       <Services/>
       <MyWork/>
       <Contact/>
+      <Resume/>
       <Footer/>
+      
+     
     </div>
     
   )

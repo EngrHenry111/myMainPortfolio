@@ -2,15 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 150px;
+    margin: 20px 50px;
 }
 
 .navmenu{
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 45px;
-    font-size: 30px;
+    gap: 25px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -68,6 +68,7 @@
 @media(max-width:768px){
     .navbar{
         margin: 20px 30px;
+        
         
     }
     .navconnect{

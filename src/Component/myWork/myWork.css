@@ -32,8 +32,9 @@
 
 .myworkcontainer img{
     box-sizing: border-box;
-    width: 419px;
+    width: 300px;
     height: 280px;
+    border-radius: 20px;
     transition: .3s;
     cursor: pointer;
 
@@ -84,6 +85,7 @@
     .mywork{
         margin: 20px 40px;
         gap: 60px;
+        width: 100%;
         align-items: start;
     }
     .myworkTitle h1{
