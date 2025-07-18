@@ -63,7 +63,13 @@
 
 .bxr1{
     font-size: 80px;
+    color: #B415FF;
 }
+.fa-brands{
+    font-size: 60px;
+    color:#B415FF ;
+}
+
 
 .contact-right{
     display: flex;

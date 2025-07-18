@@ -10,9 +10,8 @@ export const Hero = () => {
         <img src={profile_image} alt="" />
         
         <h1><span>I'm Engr. Henry Akpan,</span> Nigeria!  </h1>
-        <p>A Full-Stack  Web  Developer Electrical/Electronics  and  Telecommunication Engineer, 
-            UI/UX Designer (Figma),
-            Graphic Designer
+        <p>A Full-Stack  Web  Developer || Electrical/Electronics  and  Telecommunication Engineer || UI/UX Designer (Figma)
+          || Graphic Designer
         </p>
 
         <div className="hero_action">

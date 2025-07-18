@@ -5,7 +5,23 @@
     justify-content: justify;
     gap: 30px;
     margin: 80px 170px;
-    margin-bottom: 22px;
+   
+}
+
+.resume-title{
+   position: relative;
+   
+}
+.resume-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.resume-title img{
+    position: absolute;
+    bottom: 0;
+    right: 610px;
+    z-index: -1;
 }
 
 .resume-header{
@@ -67,5 +83,13 @@
 .skills-icon i{
     font-size: 11px;
     background: linear-gradient(260.29deg, #B415FF 100%, #DF8908 90%);
-
+    
+}
+@media(maz-width:768px){
+    .resume{
+        margin: 20px 50px;
+    }
+    .resume-header h1{
+        margin: 10px 30px;
+    }
 }

@@ -11,3 +11,25 @@ body{
   font-family: 'outfit';
   
 }
+
+
+body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+  }
+}

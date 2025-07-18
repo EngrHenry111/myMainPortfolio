@@ -24,10 +24,12 @@ const Services_data = [
         s_name: "App Design",
         s_desc:" Web development is the process of building, programming..."
     },
+
     {
         s_no: "04",
-        s_name: "App Design",
+        s_name: "Web Developmenet",
         s_desc:" Web development is the process of building, programming..."
     },
+    
 ]
 export default Services_data;

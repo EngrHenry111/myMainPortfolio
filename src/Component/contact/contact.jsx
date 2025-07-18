@@ -3,30 +3,55 @@ import './contact.css'
 import theme_partern from '../../assets/image/Group 1 (2).png'
 
 export const Contact = () => {
+ const [result, setResult] = React.useState("");
 
 
-    const onSubmit = async (event) =>{
-        event.preventDefault();
-        const formData = new formData(event.target);
+     const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-        formData.append('access_keky', "2188576c-9d37-4a0e-92fe-e7d287fe7811");
+    formData.append("access_key", "2188576c-9d37-4a0e-92fe-e7d287fe7811");
 
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
 
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                accept: "application/json"
-            },
-            body: json
-        }).then((res) =>res.json())
+    const data = await response.json();
 
-        if (res.success){
-           alert(res.message);
-        }
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
     }
+  };
+
+
+    // const onSubmit = async (event) =>{
+    //     event.preventDefault();
+    //     const formData = new formData(event.target);
+
+    //     formData.append('access_keky', "2188576c-9d37-4a0e-92fe-e7d287fe7811");
+
+    //     const object = Object.fromEntries(formData);
+    //     const json = JSON.stringify(object);
+
+    //     const res = await fetch("https://api.web3forms.com/submit", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             accept: "application/json"
+    //         },
+    //         body: json
+    //     }).then((res) =>res.json())
+
+    //     if (res.success){
+    //        alert(res.message);
+    //     }
+    // }
 
   return (
     <div id='contact' className='contact'>
@@ -37,7 +62,7 @@ export const Contact = () => {
         <div className="contactSection">
             <div className="contactLeft">
                 <h1>Let's talk</h1>
-                <p>I'm currently availble to take on new projects, so feel free to send me a message
+                <p>I'm currently available to take on new projects, so feel free to send me a message
                 about anything that you want me to work on. You can contact me anytime.
                 </p>
                 <div className="contactDetails">
@@ -49,6 +74,11 @@ export const Contact = () => {
                         <i class='bxr1  bx-phone-ring'></i>
                         <p>+234-90-2836-1165</p>
                     </div>
+                    <div className="contactDetail">
+                       <i class="fa-brands fa-linkedin"></i>
+                        <p>linkedin.com/in/engrhenrytech</p>
+                    </div>
+                   
                     <div className="contactDetail">
                         <i class='bxr1  bx-street-view'  ></i> 
                         <p>Akwa Ibom State, Nigeria.</p>
@@ -64,6 +94,7 @@ export const Contact = () => {
                 <textarea name="message" rows={10} placeholder='Enter your mesage' id=""></textarea>
                 <button className="contact-submit">Submit now</button>
             </form>
+            <span>{result}</span>
         </div>      
     </div>
   )

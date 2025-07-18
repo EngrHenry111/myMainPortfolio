@@ -1,9 +1,14 @@
 import React from 'react'
 import './resume.css'
+import theme_logo from '../../assets/image/Group 1 (2).png'
 
 export const Resume = () => {
   return (
     <div id='resume' className='resume'>
+      <div className="resume-title">
+          <h1>Resume</h1>
+          <img src={theme_logo} alt="" />
+      </div>
         <div className="resume-header">
             <h1>HENRY MFON AKPAN</h1>
             <p> Ibiono Ibom LGA Akwa Ibom State <hr /> 09028361165 <hr /> henryengrakpan@gmail.com</p>
@@ -21,12 +26,12 @@ export const Resume = () => {
  engineering and software challenges.</p>
         </div>
          <div className="sub-title">
-          <h1 className='skills'> Skills</h1>
+          <h1 className='skills'> Skills </h1>
           <div className="skills">
           <div className="body-skills">
              <div className="skills-icon">
            <i class="fa-solid fa-bars"></i>
-            <p> Electrical equipment maintenance.</p>
+          <p> Electrical equipment maintenance.</p>
             </div>
         
           <div className="skills-icon">
